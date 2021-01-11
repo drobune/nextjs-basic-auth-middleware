@@ -6,7 +6,7 @@ import {
   parseCredentials,
   AuthCredentials,
 } from './credentials'
-import { pathInRequest } from './path'
+//import { pathInRequest } from './path'
 
 export type MiddlewareOptions = {
   realm?: string
@@ -46,10 +46,10 @@ const basicAuthMiddleware = async (
     : excludePaths
 
   // Check whether the path of the request should even be checked
-  if (pathInRequest(excludeAuth, req) || !pathInRequest(includeAuth, req)) {
+  //if (pathInRequest(excludeAuth, req) || !pathInRequest(includeAuth, req)) {
     // Current path not part of the checked settings
-    return
-  }
+  //  return
+  //}
 
   const credentialsObject: AuthCredentials =
     environmentCredentials.length > 0
